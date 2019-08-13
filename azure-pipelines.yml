@@ -1,0 +1,7 @@
+- name: Test win_command module
+  hosts: windows
+  tasks:
+    - name: Run Windows Calculator
+      win_command: "calc.exe"
+      register: output
+    - debug: var=output
